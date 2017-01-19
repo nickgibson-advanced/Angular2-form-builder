@@ -1,0 +1,8 @@
+<div class="form-group">
+    <label for="options_{{model.field_id}}">{{model.field_title}}</label>
+    <div *ngFor="let option of model.field_options">
+        <label>
+        <input name="options_{{model.field_id}}" [checked]="(model.field_value==option.option_value)" type="radio" value="{{option.option_value}}"/>&nbsp;<span>{{option.option_title}}</span>
+    </label>
+    </div>
+</div>

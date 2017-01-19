@@ -1,0 +1,13 @@
+<div class="container">
+  <h1>{{formTemplate.form_name}}</h1>
+  <form #templateForm="ngForm">
+    <div ctrl-factory *ngFor="let field of formTemplate.form_fields" [model]="field"></div>
+  </form>
+</div>
+
+<div class="form-actions">
+  <p class="text-center">
+    <button class="btn btn-success right" type="button" ng-disabled="!templateForm.form.valid" (click)="submit()"><i class="icon-edit icon-white"></i> Submit Form</button>
+    <button class="btn btn-danger right" type="button" ng-click="cancel()"><i class="icon-remove icon-white"></i> Cancel</button>
+  </p>
+</div>

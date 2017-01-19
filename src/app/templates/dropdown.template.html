@@ -1,0 +1,6 @@
+<div class="form-group">
+  <label for="ddl_{{model.field_id}}">{{model.field_title}}</label>
+  <select class="form-control" id="ddl_{{model.field_id}}" required>
+    <option *ngFor="let option of model.field_options" value="{{option.option_value}}">{{option.option_title}}</option>
+  </select>
+</div>
